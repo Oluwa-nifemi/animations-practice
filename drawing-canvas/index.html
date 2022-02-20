@@ -393,6 +393,8 @@
       let currentPath = null;
 
       const startDrawing = (e) => {
+        e.stopPropagation()
+
         if (e.target.classList.contains('drawing-control')) {
           return null
         }
@@ -413,6 +415,8 @@
       svg.addEventListener('touchstart', startDrawing)
 
       const makeDrawing = (e) => {
+        e.stopPropagation()
+
         if (!isMouseDown) {
           return null
         }
